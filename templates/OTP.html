@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MedLib</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="/static/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  </head>
+  <body>
+    <form action = "/otp">
+    Email you entered: {{email}}
+    <br>
+    Enter OTP:
+    <div class="form-group">    
+        <textarea id="otp" placeholder="Type your text" name="otp" rows="4" required></textarea>
+    </div>
+    <div class="button-group">
+            <input type="submit" value="Submit">
+    </div>
+    </form>
+  </body>
+</html>

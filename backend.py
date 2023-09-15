@@ -10,8 +10,9 @@ import numpy as np
 app = Flask(__name__)
 client = pymongo.MongoClient("mongodb://localhost:27017/")
 
+OTP = 0
 db = client["MedLib"]
-
+logged_in = False
 collection = db["books"]
 em_collect = db["pwds"]
 
@@ -29,22 +30,46 @@ def add_pwd(email, pwd):
         em_collect.insert_one({"email": email, "pwd": pwd})
 
 
+def check_pwd(email,pwd):
+    em = em_collect.find({"email": email})
+    global logged_in
+    if em:
+        
+            logged_in=True
+            return render_template("form.html")
+        else:
+            logged_in=False
+            return False
+    else:
+        logged_in=False
+        return False
+
 @app.route('/enter_otp', methods=['GET', 'POST'])
-def send_mail():
+def send_mail(email):
+    global OTP 
     OTP = np.random.randint(100000, 999999)
-    email = request.form.get('email')
     add_pwd(email, OTP)
     rnf_mail_alt(email=email, OTP=OTP)
-
+    return render_template('otp.html', email=email)
 
 @app.route("/form")
 def form():
     return render_template("form.html")
 
+@app.route("/otp", methods=["GET", "POST"])
+def otp():
+    email = request.form.get("email")
+    send_mail(email)
+    if otp == OTP:
+        return render_template("form.html")
+    else:
+        return render_template("OTP.html", email=email)
+
 
 @app.route("/login")
 def login():
     return render_template("login.html")
+
 
 def search_book(book_name):
     book = collection.find_one({"book_name": book_name})

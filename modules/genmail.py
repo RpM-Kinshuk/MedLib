@@ -1,4 +1,4 @@
-def generate_mail(OTP, rainfall=1):
+def generate_mail(OTP):
     mail_content = f"""\
             <html>
 
@@ -34,9 +34,7 @@ def generate_mail(OTP, rainfall=1):
                                 &body=Add whatever suggestions or message you would like to send here" 
                                 target="_blank">
                         Mail
-                    </a> or our
-                    <a href="https://github.com/PalakDwivedi02/Rainfall-Prediction-using-ML" target="_blank"> Github Page</a>!)
-                </p>
+                    </p>
                 <p>
                 <div style="color: limegreen;">
                     Thank you for using our service!
