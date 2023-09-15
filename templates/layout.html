@@ -12,7 +12,7 @@
   <body>
     <div class="nav flex flex-row justify-between items-center px-4" id="mynav">
         <div class="left-side flex items-center">
-            <img src="MedLib Logo 2.png" alt="logo" class="w-12 h-12" id="logo">
+            <img src="{{url_for('static', filename='MedLib Logo 2.png')}}" alt="logo" class="w-12 h-12" id="logo">
             <span class="text-2xl font-semibold logo-text px-2">MedLib</span>
         </div>
          <div class="center flex flex-row items-center gap-6 menu-items">
@@ -35,7 +35,7 @@
             </ul>
         </div>
 
-        <a class="login-button px-5 py-2.5 text-sm font-medium text-black shadow" href="login.html">Login</a>
+        <a class="login-button px-5 py-2.5 text-sm font-medium text-black shadow" href="{{url_for('form')}}" >Login</a>
 
         <input type="checkbox" id="check">
         <label for="check" class="checkbtn" onclick="toggleMenu()">
