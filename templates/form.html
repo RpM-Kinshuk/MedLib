@@ -1,29 +1,38 @@
-{% extends "layout.html" %}
-{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="forms.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="Forms-container">
+        <h2>Book Review</h2>
+        <form action="/form_submit" method="POST">
+            <div class="form-group">
+                <label for="bookName">Book Name:</label>
+                <input type="text" id="bookName" name="book_name" placeholder="Book Name" required>
+            </div>
+            <div class="form-group">
+                <label for="review">Review:</label>
+                <textarea id="review" placeholder="Type your text" name="review" rows="4" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="rating">Rating:</label>
+                <div class="rating">
+                    <input type="checkbox" id="star5" name="rating" value="5" /><label for="star5" title="5 stars"></label>
+                    <input type="checkbox" id="star4" name="rating" value="4" /><label for="star4" title="4 stars"></label>
+                    <input type="checkbox" id="star3" name="rating" value="3" /><label for="star3" title="3 stars"></label>
+                    <input type="checkbox" id="star2" name="rating" value="2" /><label for="star2" title="2 stars"></label>
+                    <input type="checkbox" id="star1" name="rating" value="1" /><label for="star1" title="1 star"></label>
+                </div>
+            </div>
+            <div class="button-group">
+                <input type="submit" value="Submit">
+                <input type="button" value="Cancel" onclick="window.location.href='/'">
+            </div>
+        </form>
 
-<form action="/form_submit" method="post">
-                
-    <h2>Enter Data</h2>
-    <br>
-    <div class="inputbox">
-        <input required autocomplete="off" type="text" name="book_name">
-        <label for="">Book Name</label>
-    </div>
-    
-    <div class="inputbox">
-        <input required autocomplete="off" type="text" name="review">
-        <label for="">Review</label>
-    </div>
-    
-    <div class="inputbox">
-        <input required autocomplete="off" type="number" name="rating">
-        <label for="">Rating</label>
-        <ion-icon name="cloud-outline"></ion-icon>
-    </div>
-    <button type="submit" value="Predict" name="data">
-        Predict
-    </button>
-
-</form>
-
-{% endblock %}
+</body>
+</html>

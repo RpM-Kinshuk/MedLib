@@ -1,0 +1,82 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 0;
+}
+
+.Forms-container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    margin-top: 50px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.rating {
+    unicode-bidi: bidi-override;
+    direction: rtl;
+    text-align: center;
+    position: relative;
+}
+.rating > label {
+    display: inline-block;
+    padding: 5px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.rating > input {
+    display: none;
+}
+
+.rating > label::before {
+    content: "\2605"; /* Unicode character for a star */
+    padding: 5px;
+    color: #ccc;
+    font-size: 24px;
+}
+
+.rating > input:checked ~ label,
+.rating > label:hover ~ label {
+    color: #FFD700; /* Gold color for selected/starred items */
+}
+.button-group {
+    text-align: center;
+}
+
+input[type="submit"],
+input[type="button"] {
+    background-color: #007BFF;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+input[type="submit"]:hover,
+input[type="button"]:hover {
+    background-color: #0056b3;
+}

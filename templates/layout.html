@@ -12,9 +12,32 @@
         <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
     </head>
     <body>
-        <div style="background-color: navy; color: white; ">
-            &nbsp&nbspMedLib <ion-icon name="cloudy-night-outline"></ion-icon>
-        </div>
+        <div class="nav flex flex-row justify-between items-center px-4" id="mynav">
+            <div class="left-side flex items-center">
+                <img src="{{url_for('static', filename='MedLib Logo 2.png')}}">
+                <span class="text-2xl font-semibold logo-text px-2">MedLib</span>
+            </div>
+             <div class="center flex flex-row items-center gap-6 menu-items">
+                <ul>
+                    <li>
+                        <a class="underlines text-black transition hover:text-gray-500/75 linkss" href="index.html">Home</a>
+                    </li>
+                    <li>
+                        <a class="underlines text-black transition hover:text-gray-500/75 linkss" href="review.html">Book Reviews</a>
+                    </li>
+                    <li>
+                        <a class="underlines text-black transition hover:text-gray-500/75 linkss" href="guidelines.html">Guidelines</a>
+                    </li>
+                    <li>
+                        <a class="underlines text-black transition hover:text-gray-500/75 linkss" href="team.html">About Us</a>
+                    </li>
+                    <li>
+                        <a class="underlines text-black transition hover:text-gray-500/75 linkss" href="support.html">Support</a>
+                    </li>
+                </ul>
+            </div>
+    
+            <a class="login-button px-5 py-2.5 text-sm font-medium text-black shadow" href="login.html">Login</a>
         <section>    
             {% block content %}
            
