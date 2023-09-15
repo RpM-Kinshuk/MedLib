@@ -21,7 +21,7 @@
                     <a class="underlines text-black transition hover:text-gray-500/75 linkss" href="index.html">Home</a>
                 </li>
                 <li>
-                    <a class="underlines text-black transition hover:text-gray-500/75 linkss" href="review.html">Book Reviews</a>
+                    <a class="underlines text-black transition hover:text-gray-500/75 linkss" href="{{url_for('form')}}">Book Reviews</a>
                 </li>
                 <li>
                     <a class="underlines text-black transition hover:text-gray-500/75 linkss" href="guidelines.html">Guidelines</a>
@@ -35,7 +35,7 @@
             </ul>
         </div>
 
-        <a class="login-button px-5 py-2.5 text-sm font-medium text-black shadow" href="{{url_for('form')}}" >Login</a>
+        <a class="login-button px-5 py-2.5 text-sm font-medium text-black shadow" href="{{url_for('login')}}" >Login</a>
 
         <input type="checkbox" id="check">
         <label for="check" class="checkbtn" onclick="toggleMenu()">

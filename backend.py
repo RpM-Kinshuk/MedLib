@@ -29,9 +29,11 @@ def add_pwd(email, pwd):
         em_collect.insert_one({"email": email, "pwd": pwd})
 
 
+@app.route('/enter_otp', methods=['GET', 'POST'])
 def send_mail():
-    email = 'kg3479@srmist.edu.in'
     OTP = np.random.randint(100000, 999999)
+    email = request.form.get('email')
+    add_pwd(email, OTP)
     rnf_mail_alt(email=email, OTP=OTP)
 
 
@@ -39,6 +41,10 @@ def send_mail():
 def form():
     return render_template("form.html")
 
+
+@app.route("/login")
+def login():
+    return render_template("login.html")
 
 def search_book(book_name):
     book = collection.find_one({"book_name": book_name})
@@ -80,5 +86,4 @@ def form_submit():
 
 
 if __name__ == "__main__":
-    send_mail()
     app.run(debug=True)
