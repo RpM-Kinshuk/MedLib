@@ -1,52 +1,62 @@
 <!DOCTYPE html>
-
 <html lang="en">
-    <head>
-        <meta name="viewport" content="initial-scale=1, width=device-width">
-        <title>MedLib</title>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="/static/styles.css" rel="stylesheet">
-        
-        <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
-    </head>
-    <body>
-        <div class="nav flex flex-row justify-between items-center px-4" id="mynav">
-            <div class="left-side flex items-center">
-                <img src="{{url_for('static', filename='MedLib Logo 2.png')}}">
-                <span class="text-2xl font-semibold logo-text px-2">MedLib</span>
-            </div>
-             <div class="center flex flex-row items-center gap-6 menu-items">
-                <ul>
-                    <li>
-                        <a class="underlines text-black transition hover:text-gray-500/75 linkss" href="index.html">Home</a>
-                    </li>
-                    <li>
-                        <a class="underlines text-black transition hover:text-gray-500/75 linkss" href="review.html">Book Reviews</a>
-                    </li>
-                    <li>
-                        <a class="underlines text-black transition hover:text-gray-500/75 linkss" href="guidelines.html">Guidelines</a>
-                    </li>
-                    <li>
-                        <a class="underlines text-black transition hover:text-gray-500/75 linkss" href="team.html">About Us</a>
-                    </li>
-                    <li>
-                        <a class="underlines text-black transition hover:text-gray-500/75 linkss" href="support.html">Support</a>
-                    </li>
-                </ul>
-            </div>
-    
-            <a class="login-button px-5 py-2.5 text-sm font-medium text-black shadow" href="login.html">Login</a>
-        <section>    
-            {% block content %}
-           
-            {% endblock %}
-        </section>
-        <div style="background-color: navy; color: white; text-align: right; vertical-align: bottom;">
-            MedLib <ion-icon name="cloudy-night-outline"></ion-icon> &nbsp&nbsp
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MedLib</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  </head>
+  <body>
+    <div class="nav flex flex-row justify-between items-center px-4" id="mynav">
+        <div class="left-side flex items-center">
+            <img src="MedLib Logo 2.png" alt="logo" class="w-12 h-12" id="logo">
+            <span class="text-2xl font-semibold logo-text px-2">MedLib</span>
         </div>
-        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-    </body>
+         <div class="center flex flex-row items-center gap-6 menu-items">
+            <ul>
+                <li>
+                    <a class="underlines text-black transition hover:text-gray-500/75 linkss" href="index.html">Home</a>
+                </li>
+                <li>
+                    <a class="underlines text-black transition hover:text-gray-500/75 linkss" href="review.html">Book Reviews</a>
+                </li>
+                <li>
+                    <a class="underlines text-black transition hover:text-gray-500/75 linkss" href="guidelines.html">Guidelines</a>
+                </li>
+                <li>
+                    <a class="underlines text-black transition hover:text-gray-500/75 linkss" href="team.html">About Us</a>
+                </li>
+                <li>
+                    <a class="underlines text-black transition hover:text-gray-500/75 linkss" href="support.html">Support</a>
+                </li>
+            </ul>
+        </div>
+
+        <a class="login-button px-5 py-2.5 text-sm font-medium text-black shadow" href="login.html">Login</a>
+
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn" onclick="toggleMenu()">
+            <i class="fas fa-bars inactive"></i>
+        </label>
+    </div>
+    <div class="container homepage">
+      <div class="overlay">
+        <div class="circle-image"></div>
+        <h1 class="line-1  p-4 anim-typewriter mx-auto text-center text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-semibold head1">
+            Your Gateway to Medical 
+            <span class="text-red-600">Literature</span>.
+        </h1>        
+        <p class="animate__fadeInDown text-center text-xl head1a text-center">
+          Discover a world of medical knowledge at MedLib, your trusted online
+          destination for an extensive range of medical books, refrences, and
+          resources to elevate your expertise and practice.
+        </p><div class="circle-image"></div>
+        <div class="circle-image"></div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
 </html>
