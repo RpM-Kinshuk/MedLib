@@ -8,8 +8,7 @@ def generate_mail(OTP, rainfall=1):
             
             <body style="background-color: black; text-align: center;">
                 <br> <a href="#">
-                <img src="https://i.imgur.com/PiZMOCp.png" width="36%" height="56%"
-                    style="vertical-align:middle; align-items: center;"> </a>
+                
                 <p style="color: green;">
                     <b>
                         Hello, this is an automated message from the MedLib!
@@ -24,7 +23,7 @@ def generate_mail(OTP, rainfall=1):
                 </div>
                 </p>
                 <p style="color: red; font-weight: 750;">
-                    Link is: {rainfall:.2f} mm.
+                    
                 </p>
                 <p style="color: white;">
                     (Feel free to leave us feedback on our
@@ -43,11 +42,7 @@ def generate_mail(OTP, rainfall=1):
                     Thank you for using our service!
                 </div>
                 <div style="color: white; font-weight: 750;"> <br>
-                    <div style="color:white;">Regards,</div>
-                    <a href="https://www.linkedin.com/in/kinshuk-goel/" target="_blank" style="color: rgb(13, 13, 191);">Kinshuk</a> 
-                    and 
-                    <a href="https://www.linkedin.com/in/palak-dwivedi-017437247/" target="_blank" style="color: rgb(13, 13, 191);">Palak</a>
-                    <br> 
+                     
                     <div style="color:red">MedLib</div>
                 </div>
                 </p>
