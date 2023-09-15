@@ -36,6 +36,7 @@ def form_submit():
     review = request.form.get("review", 0)
     rating = request.form.get("rating", 0)
     
+    insert(book_name, review, rating)
     return render_template('Check.html',
                            book_name=book_name,
                            review=review,
