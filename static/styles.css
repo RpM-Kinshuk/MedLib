@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+* {
+    /* margin: 0; */
+    /* padding: 0; */
+    font-family: 'poppins', sans-serif;
+}
+
+body {
+    background: url('bg.jpg') top right no-repeat;
+    background-attachment: fixed;
+    background-size: 100%;
+    background-position: center;
+    background-color: red;
+}
+
+section {
+    background: url('bg.jpg') top right no-repeat;
+    /* display: flex; */
+    /* justify-content: center; */
+    /* align-items: center; */
+    /* min-height: 100vh; */
+    /* width: 100%; */
+    text-align: center;
+    background-attachment: fixed;
+    margin-left: 10px;
+    margin-right: 10px;
+    backdrop-filter: blur(3px);
+}
+
+section p {
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+h2,
+h1 {
+    font-size: 2em;
+    color: #fff;
+    text-align: center;
+}
+h3 {
+    position: relative;
+    text-decoration: underline;
+    color: greenyellow;
+    text-align: center;
+}
+.link {
+    margin: -15px 0 15px;
+    font-size: .9em;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+}
+
+.link label input {
+    margin-right: 3px;
+
+}
+
+.link label a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.link label a:hover {
+    text-decoration: underline;
+}
+
+button {
+    width: 100%;
+    height: 40px;
+    border-radius: 40px;
+    background: #fff;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 600;
+}
+
+.register {
+    font-size: .9em;
+    color: #fff;
+    text-align: center;
+    margin: 25px 0 10px;
+}
+
+.register p a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+}
+
+.register p a:hover {
+    text-decoration: underline;
+}
+
+a:active {
+    color: #006699;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* body {
+    background-color: #ff0000;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+    margin: 0;
+    padding: 0;
+} */

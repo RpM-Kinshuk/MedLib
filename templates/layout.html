@@ -10,7 +10,6 @@
         <link href="/static/styles.css" rel="stylesheet">
         
         <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
-        {% comment %} replace this icon with yours {% endcomment %}
     </head>
     <body>
         <div style="background-color: navy; color: white; ">
@@ -18,9 +17,7 @@
         </div>
         <section>    
             {% block content %}
-            
-            {% comment %} KEEP MIDDLE SECTION EMPTY FOR OTHER STUFF {% endcomment %}
-
+           
             {% endblock %}
         </section>
         <div style="background-color: navy; color: white; text-align: right; vertical-align: bottom;">
