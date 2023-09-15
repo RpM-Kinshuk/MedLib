@@ -13,7 +13,7 @@ collection = db["books"]
 
 @app.route('/')
 def index():
-    return render_template('index.html')
+    return render_template('form.html')
 
 @app.route('/form')
 def form():
@@ -30,13 +30,13 @@ def insert(book_name, review, rating):
     else:
         collection.insert_one({"book_name": book_name, "reviews": [{"review": review, "rating": rating}]})
 
-@app.route('/prediction', methods=['GET', 'POST'])
+@app.route('/form_submit', methods=['GET', 'POST'])
 def form_submit():
     book_name = request.form.get("book_name", 1)
     review = request.form.get("review", 0)
     rating = request.form.get("rating", 0)
     
-    return render_template('prediction.html',
+    return render_template('Check.html',
                            book_name=book_name,
                            review=review,
                            rating=rating,

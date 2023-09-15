@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<form action="/form_submit" method="post">
+                
+    <h2>Enter Data</h2>
+    <br>
+    <div class="inputbox">
+        <input required autocomplete="off" type="text" name="book_name">
+        <label for="">Book Name</label>
+    </div>
+    
+    <div class="inputbox">
+        <input required autocomplete="off" type="text" name="review">
+        <label for="">Review</label>
+    </div>
+    
+    <div class="inputbox">
+        <input required autocomplete="off" type="number" name="rating">
+        <label for="">Stars</label>
+        <ion-icon name="cloud-outline"></ion-icon>
+    </div>
+    <button type="submit" value="Predict" name="data">
+        Predict
+    </button>
+
+</form>
+
+{% endblock %}
