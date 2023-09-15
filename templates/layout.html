@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta name="viewport" content="initial-scale=1, width=device-width">
+        <title>MedLib</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="/static/styles.css" rel="stylesheet">
+        
+        <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+        {% comment %} replace this icon with yours {% endcomment %}
+    </head>
+    <body>
+        <div style="background-color: navy; color: white; ">
+            &nbsp&nbspMedLib <ion-icon name="cloudy-night-outline"></ion-icon>
+        </div>
+        <section>    
+            {% block content %}
+            
+            {% comment %} KEEP MIDDLE SECTION EMPTY FOR OTHER STUFF {% endcomment %}
+
+            {% endblock %}
+        </section>
+        <div style="background-color: navy; color: white; text-align: right; vertical-align: bottom;">
+            MedLib <ion-icon name="cloudy-night-outline"></ion-icon> &nbsp&nbsp
+        </div>
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    </body>
+</html>
